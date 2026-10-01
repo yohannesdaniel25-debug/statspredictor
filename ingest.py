@@ -76,6 +76,7 @@ if __name__ == "__main__":
     # Run this on YOUR machine (not this sandbox) since it needs live
     # internet access to stats.nba.com.
     test_players = ["LeBron James", "Stephen Curry", "Nikola Jokic"]
-    result = fetch_multiple_players(test_players, season="2024-25")
+    result = fetch_multiple_players(test_players, season="2025-26")
     print("\nFinal combined shape:", result.shape)
     print(result[["PLAYER_NAME", "GAME_DATE", "PTS", "REB", "AST"]].head(10))
+    print(result['PLAYER_NAME'].value_counts())
